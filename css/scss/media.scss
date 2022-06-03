@@ -1,0 +1,213 @@
+@media screen and (max-width: 480px) {
+
+  body{
+    border: 0px;
+  }
+
+  main{
+    display: grid;
+    grid-template-rows: 1fr 1f 1fr 1fr;
+  }
+
+  .title-logo__leScone{
+    margin: 30px auto 0 auto;
+  }
+
+  .bar-caractere__datail{
+    margin: calc($margin-default-mobile / 2) auto;
+    font-size: 60px;
+  }
+
+  .section-info__text{
+    display: flex;
+    letter-spacing: 1px;
+    line-height: 20px;
+    justify-content: space-around;
+    margin: $margin-default-mobile 0;
+
+    div{
+      display: flex;
+      flex-wrap: wrap;
+      height: 50px;
+      justify-content: center;
+      text-align: center;
+      min-width: 180px;
+      
+      p{
+  
+        align-self: center;
+      }
+    }
+  }
+
+  .cheffCozinha__picture{
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+.cardapio{
+  background-color: $firs-color;
+  display: grid;
+  align-items: center;
+  //grid-template-columns: 1fr 1fr;
+  //grid-template-rows: 100px 30px;
+  h1{
+    grid-column: 1/3;
+    text-align: center;
+    margin: $margin-default-mobile 0;
+    font-size: $m__title;
+  }
+
+  span{
+    @include m__detail__black__span;
+    align-self: flex-start;
+    grid-column: 1/3;
+    margin: 0 auto;
+  }
+
+  img{
+    border: 5px solid $second-color;
+    border-radius: 100%;
+    margin: $margin-default-mobile 0;
+    max-width: 150px;
+  }
+
+  .subtitle1{
+    @include subtitleConfigMobile;
+    margin: $margin-default-mobile 0;
+    grid-column: 1/3;
+  }
+
+  .price-food1__table{
+    @include priceConfigMobile;
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .price-food2__table{
+    @include priceConfigMobile;
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .food1__photo{
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .price-style__text{
+    background-color: $firs-color;
+    color: $second-color;
+    font-weight: 600;
+    padding: 0 5px 0 8px;
+  }
+
+  .subtitle2{
+    @include subtitleConfigMobile;
+    margin: $margin-default-mobile 0;
+  }
+
+  h2 {
+    font-size: $m__subtitle;
+    text-align: center;
+  }
+
+}
+
+.form{
+  display: flex;
+  flex-flow: column nowrap;
+
+  h2 {
+    font-size: $m__title;
+    margin: $margin-default-mobile 0;
+    text-align: center;
+  }
+  span{
+    @include m__detail__black__span;
+    margin-bottom: $margin-default-mobile;
+  }
+
+  form{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    label{
+      text-transform: uppercase;
+      font-size: 24px;
+      padding-left: 5px;
+    }
+
+    .input__flex div{
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    input {
+      border: 3px solid $second-color;
+      height: 48px;
+      font-size: 22px;
+      margin: 10px auto 15px auto;
+      width: 95%;
+    }
+    textarea{
+      border: 3px solid $second-color;
+      height: calc(48px * 3);
+      font-size: 22px;
+      margin: 10px auto 15px auto;
+      width: 95%;
+    }
+  }
+
+  .contact{
+    display: flex;
+    flex-flow: column nowrap;
+
+    button{
+      border: 3px solid $second-color;
+      height: 48px;
+      font-size: 22px;
+      margin: 10px auto 15px auto;
+      width: 95%;
+    }
+
+    p{
+      text-align: end;
+      margin: 0 5px 10px 0;
+      color: $second-color;
+      font-size: 22px;
+    }
+  }
+
+  img{
+    display: none;
+  }
+
+  
+
+  
+}
+
+
+footer{
+  align-items: center;
+  background-color: rgb(65, 47, 47);
+  display: flex;
+  flex-flow: column wrap;
+  height: calc(48px * 2);
+  justify-content: center;
+  width: 20px;
+
+  p{
+    font-size: 24px;
+    color: $firs-color;
+    margin-bottom: 10px;
+  }
+
+  img{
+    height: 40px;
+    object-fit: contain;
+  }
+}
